@@ -13,6 +13,21 @@
 	"upload_source_maps": true,
 	"compatibility_flags": [
 		"nodejs_compat"
+	],
+	"d1_databases": [
+		{
+			"binding": "finalboss_db",
+			"database_name": "finalboss-db",
+			"database_id": "93e00cc4-095d-42e4-8375-b9260f87df91",
+			"remote": true
+		}
+	],
+	"r2_buckets": [
+		{
+			"bucket_name": "finalboss-storage",
+			"binding": "finalboss_storage",
+			"remote": true
+		}
 	]
 	/**
 	 * Smart Placement
