@@ -1,4 +1,4 @@
-import { generateBossFromImage } from "../services/openaiService";
+import { generateBossFromImage } from "../services/localAiService";
 import { json } from "../utils/response";
 
 export async function handleGenerate(request, env) {
