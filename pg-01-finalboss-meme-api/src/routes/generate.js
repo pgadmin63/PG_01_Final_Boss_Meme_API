@@ -1,4 +1,4 @@
-import { generateBossFromImage } from "../services/geminiService";
+import { generateBossFromImage } from "../services/openaiService";
 import { json } from "../utils/response";
 
 export async function handleGenerate(request, env) {
