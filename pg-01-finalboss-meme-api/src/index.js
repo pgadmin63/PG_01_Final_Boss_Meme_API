@@ -1,13 +1,3 @@
-/**
- * Welcome to Cloudflare Workers! This is your first worker.
- *
- * - Run `npm run dev` in your terminal to start a development server
- * - Open a browser tab at http://localhost:8787/ to see your worker in action
- * - Run `npm run deploy` to publish your worker
- *
- * Learn more at https://developers.cloudflare.com/workers/
- */
-
 import { handleGenerate } from "./routes/generate";
 import { handleCors, json } from "./utils/response";
 
@@ -17,6 +7,13 @@ export default {
 
     if (request.method === "OPTIONS") {
       return handleCors();
+    }
+
+    if (url.pathname === "/" && request.method === "GET") {
+      return json({
+        success: true,
+        message: "Final Boss API Running",
+      });
     }
 
     if (url.pathname === "/api/generate" && request.method === "POST") {

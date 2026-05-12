@@ -2,6 +2,9 @@ import { getBossPrompt } from "../prompts/bossPrompt";
 import { arrayBufferToBase64 } from "../utils/image";
 
 export async function generateBossFromImage(imageFile, env) {
+    console.log("===== GEMINI DEBUG =====");
+    console.log("API KEY:", env.GEMINI_API_KEY);
+    
   const arrayBuffer = await imageFile.arrayBuffer();
   const base64Image = arrayBufferToBase64(arrayBuffer);
 
